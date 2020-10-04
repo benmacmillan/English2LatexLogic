@@ -17,11 +17,10 @@ output = Text(height=3, width=30)
 output.pack()
 
 def submit_a(self):
-    terms = {'and':'\land', 'or':'\lor', 'not':'\\neg', 'implies':'\implies', 'if':'', 'then': '\supset'}
+    terms = {'and':'\land', 'or':'\lor', 'not':'\\neg','(not':'( \\neg', 'implies':'\implies', 'if':'', 'then': '\supset'}
     inputSubmit = input.get()
     if inputSubmit != ('quit'):
         conversion = " ".join(terms.get(word, word) for word in inputSubmit.split())
-        print(conversion)
         output.insert(END, conversion + '\n')
         pyperclip.copy(str(conversion))
         input.delete(0, 'end')

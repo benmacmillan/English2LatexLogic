@@ -11,9 +11,9 @@ root.geometry("300x100")
 root.resizable(width=False, height=False)
 root.attributes('-topmost', True) # keep the window on top for when I'm writing logic from a text.
 root.update()
-input = Entry(root, width=40)
+input = Entry(root, width=50)
 input.pack()
-output = Text(height=3, width=30)
+output = Text(root)
 output.pack()
 
 def submit_a(self):
